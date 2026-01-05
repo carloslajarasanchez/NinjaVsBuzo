@@ -8,5 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cortinilla.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: b0a23b933c3993c4f9c4fa9696875b66
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -26,14 +26,6 @@ public class Connection : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         print("Conectado al master");
-
-        //Entramos al Lobby para poder ver la lista de salas
-        PhotonNetwork.JoinLobby();
-    }
-
-    public override void OnJoinedLobby()
-    {
-        Debug.Log("Entraste al Lobby");
     }
 
     // Metodo de conexion con el master con el boton
