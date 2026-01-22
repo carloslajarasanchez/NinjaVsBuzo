@@ -7,10 +7,12 @@ public class Player : MonoBehaviour
 {
     [SerializeField]private float _speed;
     [SerializeField]private float _jumpForce = 200f;
-    [SerializeField]private float _checkGroundDistance = .1f;
+    [SerializeField]private float _raycastSize = .1f;
     private bool _isGrounded = false;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
+
+    public string NickName;
 
     public float Speed { get { return _speed; } private set { _speed = value; } }
     public Rigidbody2D Rigidbody2D { get { return _rigidbody2D; } private set { _rigidbody2D = value; } }
@@ -37,7 +39,6 @@ public class Player : MonoBehaviour
             Move();
             Jump();
             UpdateAnimations();
-            DetectGround();
         }
         
     }
@@ -65,7 +66,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (_isGrounded)
+        if (IsGrounded())
         {
             if (Input.GetButtonDown("Jump"))
             {
@@ -82,14 +83,15 @@ public class Player : MonoBehaviour
         _animator.SetFloat("velocityY", _rigidbody2D.velocity.y);
     }
 
-    private void DetectGround()
+    private bool IsGrounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.down * 0.16f, Vector2.down, _checkGroundDistance);
+        Debug.DrawRay(transform.position, Vector2.down * _raycastSize, Color.green);
+        Debug.DrawRay(transform.position + new Vector3(.05f, 0, 0), Vector2.down * _raycastSize, Color.green);
+        Debug.DrawRay(transform.position + new Vector3(-.05f, 0, 0), Vector2.down * _raycastSize, Color.green);
 
-        _isGrounded = hit.collider != null;
-
-        Color color = _isGrounded ? Color.green : Color.red;
-        Debug.DrawRay(transform.position + Vector3.down * 0.16f, Vector2.down * _checkGroundDistance, color);
+        return Physics2D.Raycast(transform.position, Vector2.down, _raycastSize, LayerMask.GetMask("Ground")) ||
+            Physics2D.Raycast(transform.position + new Vector3(.05f, 0, 0), Vector2.down, _raycastSize, LayerMask.GetMask("Ground")) ||
+            Physics2D.Raycast(transform.position + new Vector3(-.05f, 0, 0), Vector2.down, _raycastSize, LayerMask.GetMask("Ground"));
     }
 
 }

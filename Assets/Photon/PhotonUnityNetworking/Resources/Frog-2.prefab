@@ -129,7 +129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1
   _jumpForce: 200
-  _checkGroundDistance: 0.1
+  _raycastSize: 0.3
+  NickName: Jesus
 --- !u!50 &595281983090237426
 Rigidbody2D:
   serializedVersion: 4
