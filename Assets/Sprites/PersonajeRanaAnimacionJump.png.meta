@@ -226,7 +226,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PersonajeRanaAnimacionJump_0: -3280558360773407806
+      PersonajeRanaAnimacionJump_1: -1014546972717394662
+      PersonajeRanaAnimacionJump_2: 8590596895000263566
+      PersonajeRanaAnimacionJump_3: -3210991169337079433
+      PersonajeRanaAnimacionJump_4: -4205658370421190121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

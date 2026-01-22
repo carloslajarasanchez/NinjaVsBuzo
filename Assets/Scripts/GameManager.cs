@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate("Frog", new Vector3(-2.5f, -.5f, 0f), Quaternion.identity);
+            PhotonNetwork.Instantiate("Frog-2", new Vector3(-2.5f, -.5f, 0f), Quaternion.identity);
         }
         else
         {

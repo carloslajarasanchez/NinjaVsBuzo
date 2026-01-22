@@ -226,7 +226,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PersonajeRanaAnimacionIdle_0: 3050790229671641346
+      PersonajeRanaAnimacionIdle_1: 1415837339383180993
+      PersonajeRanaAnimacionIdle_2: -4051282501885561056
+      PersonajeRanaAnimacionIdle_3: 1488882524593792540
+      PersonajeRanaAnimacionIdle_4: -804996881442982723
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
