@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -96,9 +96,9 @@ namespace Michsky.UI.ModernUIPack
                     {
                         bTarget.normalText.text = buttonText.stringValue;
                         bTarget.highlightedText.text = buttonText.stringValue;
-                    }               
+                    }
 
-                    else if(useCustomContent.boolValue == false && bTarget.normalText == null)
+                    else if (useCustomContent.boolValue == false && bTarget.normalText == null)
                     {
                         GUILayout.Space(2);
                         EditorGUILayout.HelpBox("'Text Object' is not assigned. Go to Resources tab and assign the correct variable.", MessageType.Error);
@@ -141,7 +141,7 @@ namespace Michsky.UI.ModernUIPack
                     EditorGUILayout.LabelField(new GUIContent("Highlighted Text"), customSkin.FindStyle("Text"), GUILayout.Width(120));
                     EditorGUILayout.PropertyField(highlightedText, new GUIContent(""));
 
-                    GUILayout.EndHorizontal(); 
+                    GUILayout.EndHorizontal();
 
                     if (enableButtonSounds.boolValue == true)
                     {
@@ -281,7 +281,7 @@ namespace Michsky.UI.ModernUIPack
                     }
 
                     GUILayout.EndVertical();
-                    break;            
+                    break;
             }
 
             serializedObject.ApplyModifiedProperties();

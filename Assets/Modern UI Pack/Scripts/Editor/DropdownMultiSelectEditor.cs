@@ -1,11 +1,11 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
 {
     [CustomEditor(typeof(DropdownMultiSelect))]
     public class DropdownMultiSelectEditor : Editor
-    {      
+    {
         private DropdownMultiSelect dTarget;
         private int currentTab;
 
@@ -77,14 +77,14 @@ namespace Michsky.UI.ModernUIPack
                     GUILayout.BeginVertical(EditorStyles.helpBox);
                     EditorGUI.indentLevel = 1;
 
-                    EditorGUILayout.PropertyField(dropdownItems, new GUIContent("Dropdown Items"), true); 
+                    EditorGUILayout.PropertyField(dropdownItems, new GUIContent("Dropdown Items"), true);
                     dropdownItems.isExpanded = true;
 
                     EditorGUI.indentLevel = 0;
-                  
+
                     if (GUILayout.Button("+  Add a new item", customSkin.button))
                         dTarget.AddNewItem();
-                  
+
                     GUILayout.EndVertical();
                     break;
 
@@ -133,7 +133,7 @@ namespace Michsky.UI.ModernUIPack
                     enableTrigger.boolValue = GUILayout.Toggle(enableTrigger.boolValue, new GUIContent("Enable Trigger"), customSkin.FindStyle("Toggle"));
                     enableTrigger.boolValue = GUILayout.Toggle(enableTrigger.boolValue, new GUIContent(""), customSkin.FindStyle("Toggle Helper"));
 
-                    GUILayout.EndHorizontal();  
+                    GUILayout.EndHorizontal();
 
                     if (enableTrigger.boolValue == true && dTarget.triggerObject == null)
                     {
@@ -164,7 +164,7 @@ namespace Michsky.UI.ModernUIPack
                             GUILayout.BeginHorizontal();
                             EditorGUILayout.HelpBox("'Scrollbar' is not assigned. Go to Resources tab and assign the correct variable.", MessageType.Error);
                             GUILayout.EndHorizontal();
-                        }                     
+                        }
                     }
 
                     GUILayout.BeginHorizontal(EditorStyles.helpBox);
@@ -185,7 +185,7 @@ namespace Michsky.UI.ModernUIPack
                     isListItem.boolValue = GUILayout.Toggle(isListItem.boolValue, new GUIContent(""), customSkin.FindStyle("Toggle Helper"));
 
                     GUILayout.EndHorizontal();
-             
+
 
                     if (isListItem.boolValue == true && dTarget.listParent == null)
                     {

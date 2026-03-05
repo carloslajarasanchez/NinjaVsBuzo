@@ -293,7 +293,7 @@ namespace Michsky.UI.ModernUIPack
                 EditorGUILayout.PropertyField(dropdownFontSize, new GUIContent(""), GUILayout.Width(40));
                 EditorGUILayout.PropertyField(dropdownFont, new GUIContent(""));
 
-                GUILayout.EndHorizontal();;
+                GUILayout.EndHorizontal(); ;
                 GUILayout.BeginHorizontal(EditorStyles.helpBox);
 
                 EditorGUILayout.LabelField(new GUIContent("Item Font"), customSkin.FindStyle("Text"), GUILayout.Width(120));
@@ -866,7 +866,7 @@ namespace Michsky.UI.ModernUIPack
             {
                 EditorGUILayout.HelpBox("These values are universal and will affect any object that contains 'UI Manager' component.", MessageType.Info);
                 EditorGUILayout.HelpBox("Remove 'UI Manager' component from the object if want to assign unique values.", MessageType.Info);
-				EditorGUILayout.HelpBox("You can press 'CTRL + SHIFT + M' to open UI Manager quickly.", MessageType.Info);
+                EditorGUILayout.HelpBox("You can press 'CTRL + SHIFT + M' to open UI Manager quickly.", MessageType.Info);
             }
 
             GUILayout.EndVertical();
@@ -988,7 +988,7 @@ namespace Michsky.UI.ModernUIPack
                 {
                     Debug.LogWarning("<b>[UI Manager]</b> Resetting failed.");
                 }
-            }    
+            }
         }
     }
 }

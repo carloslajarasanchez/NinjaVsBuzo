@@ -14,7 +14,7 @@ namespace Michsky.UI.ModernUIPack
         {
             if (toggleObject == null)
                 toggleObject = gameObject.GetComponent<Toggle>();
-           
+
             if (toggleAnimator == null)
                 toggleAnimator = toggleObject.GetComponent<Animator>();
 

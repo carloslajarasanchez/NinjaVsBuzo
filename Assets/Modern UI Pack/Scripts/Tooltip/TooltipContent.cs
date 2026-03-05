@@ -1,7 +1,7 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using TMPro;
 
 namespace Michsky.UI.ModernUIPack
 {

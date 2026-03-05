@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -81,7 +81,7 @@ namespace Michsky.UI.ModernUIPack
 
                     GUILayout.EndHorizontal();
 
-                    if(rsTarget.sliderImage != null && rsTarget.indicatorPivot != null && rsTarget.valueText != null)
+                    if (rsTarget.sliderImage != null && rsTarget.indicatorPivot != null && rsTarget.valueText != null)
                     {
                         rsTarget.SliderValueRaw = currentValue.floatValue;
                         float normalizedAngle = rsTarget.SliderAngle / 360.0f;

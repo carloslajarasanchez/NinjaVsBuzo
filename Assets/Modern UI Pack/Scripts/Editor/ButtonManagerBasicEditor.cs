@@ -1,10 +1,10 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
 {
     [CanEditMultipleObjects]
-    [CustomEditor(typeof(ButtonManagerBasic))] 
+    [CustomEditor(typeof(ButtonManagerBasic))]
     public class ButtonManagerBasicEditor : Editor
     {
         private ButtonManagerBasic bTarget;

@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -79,7 +79,7 @@ namespace Michsky.UI.ModernUIPack
                     if (pbTarget.loadingBar != null && pbTarget.textPercent != null)
                     {
                         pbTarget.loadingBar.fillAmount = pbTarget.currentPercent / pbTarget.maxValue;
-                       
+
                         if (isPercent.boolValue == true)
                             pbTarget.textPercent.text = ((int)pbTarget.currentPercent).ToString("F0") + "%";
                         else
@@ -132,7 +132,7 @@ namespace Michsky.UI.ModernUIPack
                     isOn.boolValue = GUILayout.Toggle(isOn.boolValue, new GUIContent("Is On"), customSkin.FindStyle("Toggle"));
                     isOn.boolValue = GUILayout.Toggle(isOn.boolValue, new GUIContent(""), customSkin.FindStyle("Toggle Helper"));
 
-                    GUILayout.EndHorizontal();                 
+                    GUILayout.EndHorizontal();
                     GUILayout.BeginHorizontal(EditorStyles.helpBox);
 
                     restart.boolValue = GUILayout.Toggle(restart.boolValue, new GUIContent("Restart"), customSkin.FindStyle("Toggle"));

@@ -39,7 +39,7 @@ namespace Michsky.UI.ModernUIPack
                     enableAnim = false;
                 }
 
-                else if(listScrollbar.value != 1)
+                else if (listScrollbar.value != 1)
                     shadowAnimator.Play("In");
 
             }

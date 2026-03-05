@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -27,7 +27,7 @@ namespace Michsky.UI.ModernUIPack
         {
             if (Application.isPlaying && webglMode == true)
                 return;
-   
+
             try
             {
                 if (dropdownMain != null)

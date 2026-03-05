@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using TMPro;
+﻿using TMPro;
+using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -37,7 +37,7 @@ namespace Michsky.UI.ModernUIPack
             UpdateState();
         }
 
-        public void AnimateIn() 
+        public void AnimateIn()
         {
             inputFieldAnimator.Play(inAnim);
         }

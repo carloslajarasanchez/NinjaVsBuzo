@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -56,7 +56,7 @@ namespace Michsky.UI.ModernUIPack
         public void UpdateUI()
         {
             loadingBar.fillAmount = currentPercent / maxValue;
-          
+
             if (isPercent == true)
                 textPercent.text = ((int)currentPercent).ToString("F0") + "%";
             else

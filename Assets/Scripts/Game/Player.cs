@@ -1,13 +1,11 @@
 using Photon.Pun;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]private float _speed;
-    [SerializeField]private float _jumpForce = 200f;
-    [SerializeField]private float _raycastSize = .1f;
+    [SerializeField] private float _speed;
+    [SerializeField] private float _jumpForce = 200f;
+    [SerializeField] private float _raycastSize = .1f;
     private bool _isGrounded = false;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
@@ -40,13 +38,12 @@ public class Player : MonoBehaviour
             Jump();
             UpdateAnimations();
         }
-        
+
     }
 
     [PunRPC]
     public void RotateSprite(bool rotate)
     {
-        Debug.Log("Rotation: " + rotate);
         GetComponent<SpriteRenderer>().flipX = rotate;
     }
 
@@ -66,15 +63,12 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (IsGrounded())
+        Debug.Log($"Tocando el puto suelo: {IsGrounded()}");
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            if (Input.GetButtonDown("Jump"))
-            {
-                _rigidbody2D.AddForce(transform.up * _jumpForce);
-                _isGrounded = false;
-            }
+            
+            _rigidbody2D.AddForce(transform.up * _jumpForce);
         }
-        
     }
 
     private void UpdateAnimations()

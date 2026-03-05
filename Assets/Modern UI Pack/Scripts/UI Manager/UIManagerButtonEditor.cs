@@ -1,9 +1,8 @@
 ﻿#if UNITY_EDITOR
-using UnityEngine;
-using UnityEditor;
 using System;
-using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
+using UnityEngine.UI;
 
 namespace Michsky.UI.ModernUIPack
 {

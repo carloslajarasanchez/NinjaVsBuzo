@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using TMPro;
+using UnityEngine.UI;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -54,7 +54,7 @@ namespace Michsky.UI.ModernUIPack
                     });
                 }
 
-                mainSlider.onValueChanged.AddListener(delegate 
+                mainSlider.onValueChanged.AddListener(delegate
                 {
                     sliderEvent.Invoke(mainSlider.value);
                     UpdateUI();

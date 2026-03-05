@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine;
 
 public class Connection : MonoBehaviourPunCallbacks
 {
@@ -15,7 +13,7 @@ public class Connection : MonoBehaviourPunCallbacks
     // Metodo que controla si pasamos a la siguiente escena si somos mas de una persona
     private void Update()
     {
-        if(PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount > 1)
+        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount > 1)
         {
             // Cargamos el siguiente nivel
             PhotonNetwork.LoadLevel(1);
@@ -44,5 +42,5 @@ public class Connection : MonoBehaviourPunCallbacks
     }
 
 
-     
+
 }

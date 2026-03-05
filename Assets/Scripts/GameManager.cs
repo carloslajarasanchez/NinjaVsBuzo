@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Photon.Pun;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,13 +12,13 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            PhotonNetwork.Instantiate("VirtualGuy", new Vector3(2.5f, -.5f, 0f), Quaternion.identity);
+            PhotonNetwork.Instantiate("Frog-3", new Vector3(2.5f, -.5f, 0f), Quaternion.identity);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

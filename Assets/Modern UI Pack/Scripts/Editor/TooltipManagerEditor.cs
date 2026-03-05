@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -123,7 +123,7 @@ namespace Michsky.UI.ModernUIPack
                     EditorGUILayout.PropertyField(tooltipSmoothness, new GUIContent(""));
 
                     GUILayout.EndHorizontal();
-                    break;            
+                    break;
             }
 
             serializedObject.ApplyModifiedProperties();

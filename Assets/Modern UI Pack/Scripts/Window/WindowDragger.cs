@@ -17,7 +17,7 @@ namespace Michsky.UI.ModernUIPack
 
         public new void Start()
         {
-            if(dragArea == null)
+            if (dragArea == null)
             {
                 try
                 {

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
@@ -131,10 +130,10 @@ namespace Michsky.UI.ModernUIPack
             if (newWindowIndex != currentWindowIndex)
             {
                 currentWindow = windows[currentWindowIndex].windowObject;
-               
+
                 try
                 {
-                    currentButton = windows[currentWindowIndex].buttonObject;         
+                    currentButton = windows[currentWindowIndex].buttonObject;
                 }
 
                 catch { }

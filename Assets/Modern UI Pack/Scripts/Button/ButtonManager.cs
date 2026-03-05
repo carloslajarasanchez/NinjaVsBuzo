@@ -1,9 +1,9 @@
 ﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -29,7 +29,7 @@ namespace Michsky.UI.ModernUIPack
 
         // Settings
         public AnimationSolution animationSolution = AnimationSolution.SCRIPT;
-        [Range(0.25f, 15)]  public float fadingMultiplier = 8;
+        [Range(0.25f, 15)] public float fadingMultiplier = 8;
         public bool useCustomContent = false;
         public bool enableButtonSounds = false;
         public bool useHoverSound = true;
@@ -186,7 +186,7 @@ namespace Michsky.UI.ModernUIPack
             {
                 currentNormalValue -= Time.deltaTime * fadingMultiplier;
                 normalCG.alpha = currentNormalValue;
-              
+
                 currenthighlightedValue += Time.deltaTime * fadingMultiplier;
                 highlightedCG.alpha = currenthighlightedValue;
 

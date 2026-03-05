@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -67,7 +67,7 @@ namespace Michsky.UI.ModernUIPack
                 case 0:
                     GUILayout.BeginVertical(EditorStyles.helpBox);
                     EditorGUI.indentLevel = 1;
-                  
+
                     EditorGUILayout.PropertyField(chartData, new GUIContent("Chart Items"));
                     chartData.isExpanded = true;
 

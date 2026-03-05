@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -82,7 +82,7 @@ namespace Michsky.UI.ModernUIPack
                     EditorGUI.indentLevel = 1;
                     if (GUILayout.Button("+  Add a new item", customSkin.button))
                         hsTarget.AddNewItem();
-                   
+
                     GUILayout.EndVertical();
                     GUILayout.Space(10);
                     EditorGUILayout.PropertyField(selectorEvent, new GUIContent("Selector Event"), true);
@@ -135,7 +135,7 @@ namespace Michsky.UI.ModernUIPack
                         else
                             hsTarget.indicatorParent.gameObject.SetActive(true);
                     }
-                    
+
                     else
                     {
                         if (hsTarget.indicatorParent != null)

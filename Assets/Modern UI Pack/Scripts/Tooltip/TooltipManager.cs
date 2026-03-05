@@ -54,7 +54,7 @@ namespace Michsky.UI.ModernUIPack
 #elif ENABLE_INPUT_SYSTEM
                 cursorPos = Mouse.current.position.ReadValue();
 #endif
-                cursorPos.z = tooltipZHelper.position.z;       
+                cursorPos.z = tooltipZHelper.position.z;
                 uiPos = tooltipRect.anchoredPosition;
                 CheckForBounds();
 

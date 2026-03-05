@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -96,7 +96,7 @@ namespace Michsky.UI.ModernUIPack
                     {
                         bTarget.normalIcon.sprite = bTarget.buttonIcon;
                         bTarget.highlightedIcon.sprite = bTarget.buttonIcon;
-                    }               
+                    }
 
                     else if (useCustomContent.boolValue == false && bTarget.normalIcon == null)
                     {
