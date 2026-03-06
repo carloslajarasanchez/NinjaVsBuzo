@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 8063915886928984282}
   - component: {fileID: 7043395625356633133}
   - component: {fileID: 1363176333774199294}
-  m_Layer: 0
+  - component: {fileID: 5042428037972169771}
+  m_Layer: 6
   m_Name: Frog-3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8067564, y: 0.25758928, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8849634418d2484e812436de1da888e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _jumpForce: 200
+  _speed: 2
+  _jumpForce: 250
   _raycastSize: 0.3
   NickName: Jesus
 --- !u!50 &595281983090237426
@@ -156,7 +157,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &4526569976787969102
 MonoBehaviour:
@@ -259,3 +260,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.07}
   m_Size: {x: 1, y: 2.45}
   m_Direction: 0
+--- !u!114 &5042428037972169771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5552359165418329921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc9a5ef89ab2cb40a7a5bc07873ada1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

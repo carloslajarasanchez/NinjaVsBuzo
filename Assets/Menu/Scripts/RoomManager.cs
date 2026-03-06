@@ -1,4 +1,5 @@
 ﻿using Photon.Pun;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,15 +32,34 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
+        Debug.Log($"Escena cargada: {scene.name}, buildIndex: {scene.buildIndex}");
+
         if (scene.buildIndex == 1)
         {
-            // Obtenemos el índice de este jugador en la sala (0, 1, 2...)
-            int playerIndex = PhotonNetwork.LocalPlayer.ActorNumber - 1;
-
-            Transform spawnPoint = SpawnManager.Instance.GetSpawnPoint(playerIndex);
-
-            string prefabName = PhotonNetwork.IsMasterClient ? "Frog-2" : "VirtualGuy";
-            PhotonNetwork.Instantiate(prefabName, spawnPoint.position, spawnPoint.rotation);
+            StartCoroutine(SpawnPlayerWhenReady());
         }
+    }
+
+    private IEnumerator SpawnPlayerWhenReady()
+    {
+        // Espera hasta que el SpawnManager exista en la escena
+        float timeout = 5f; // segundos máximo de espera
+        float elapsed = 0f;
+
+        while (SpawnManager.Instance == null)
+        {
+            elapsed += Time.deltaTime;
+            if (elapsed >= timeout)
+            {
+                Debug.LogError("SpawnManager no encontrado tras esperar 5 segundos!");
+                yield break;
+            }
+            yield return null;
+        }
+
+        int playerIndex = PhotonNetwork.LocalPlayer.ActorNumber - 1;
+        Transform spawnPoint = SpawnManager.Instance.GetSpawnPoint(playerIndex);
+        string prefabName = PhotonNetwork.IsMasterClient ? "Frog-2" : "VirtualGuy";
+        PhotonNetwork.Instantiate(prefabName, spawnPoint.position, spawnPoint.rotation);
     }
 }

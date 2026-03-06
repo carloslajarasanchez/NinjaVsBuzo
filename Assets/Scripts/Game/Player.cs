@@ -49,7 +49,12 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        _rigidbody2D.velocity = (transform.right * Speed * Input.GetAxis("Horizontal")) + (transform.up * _rigidbody2D.velocity.y);
+        float horizontal = Input.GetAxis("Horizontal");
+
+        // Si está en el aire, reduce la velocidad a la mitad
+        float currentSpeed = _isGrounded ? Speed : Speed * 0.5f;
+
+        _rigidbody2D.velocity = (transform.right * currentSpeed * horizontal) + (transform.up * _rigidbody2D.velocity.y);
 
         if (_rigidbody2D.velocity.x > 0.1f && GetComponent<SpriteRenderer>().flipX)
         {

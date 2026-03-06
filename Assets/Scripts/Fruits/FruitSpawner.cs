@@ -10,7 +10,9 @@ public class FruitSpawner : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        // Solo el MasterClient genera las frutas, Photon las sincroniza al resto
+        Debug.Log($"FruitSpawner: IsMasterClient = {PhotonNetwork.IsMasterClient}");
+        Debug.Log($"FruitSpawner: IsConnected = {PhotonNetwork.IsConnected}");
+
         if (PhotonNetwork.IsMasterClient)
         {
             FruitManager.Instance.RegisterFruits(fruitCount);
@@ -20,6 +22,7 @@ public class FruitSpawner : MonoBehaviourPunCallbacks
 
     private void SpawnFruits()
     {
+        Debug.Log($"Intentando spawnear {fruitCount} frutas");
         for (int i = 0; i < fruitCount; i++)
         {
             Vector3 randomPos = new Vector3(
@@ -27,6 +30,7 @@ public class FruitSpawner : MonoBehaviourPunCallbacks
                 Random.Range(areaMin.y, areaMax.y),
                 0f
             );
+            Debug.Log($"Spawneando fruta en {randomPos}");
             PhotonNetwork.Instantiate(fruitPrefab.name, randomPos, Quaternion.identity);
         }
     }
