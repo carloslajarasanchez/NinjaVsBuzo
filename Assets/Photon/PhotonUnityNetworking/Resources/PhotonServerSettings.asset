@@ -41,6 +41,7 @@ MonoBehaviour:
   - AnnounceWinner
   - SyncScore
   - TriggerWin
+  - OnStateUpdate
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

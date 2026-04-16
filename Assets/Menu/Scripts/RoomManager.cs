@@ -61,5 +61,13 @@ public class RoomManager : MonoBehaviourPunCallbacks
         Transform spawnPoint = SpawnManager.Instance.GetSpawnPoint(playerIndex);
         string prefabName = PhotonNetwork.IsMasterClient ? "Frog-2" : "Frog-3";
         PhotonNetwork.Instantiate(prefabName, spawnPoint.position, spawnPoint.rotation);
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            // Enemigos solo los spawnea el MasterClient
+            Transform enemySpawnPoint = SpawnEnemyManager.Instance.GetSpawnPoint(0);
+            string enemyPrefabName = "BatEnemy";
+            PhotonNetwork.Instantiate(enemyPrefabName, enemySpawnPoint.position, enemySpawnPoint.rotation);
+        }
     }
 }
