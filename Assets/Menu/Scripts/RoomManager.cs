@@ -59,7 +59,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
         int playerIndex = PhotonNetwork.LocalPlayer.ActorNumber - 1;
         Transform spawnPoint = SpawnManager.Instance.GetSpawnPoint(playerIndex);
-        string prefabName = PhotonNetwork.IsMasterClient ? "Frog-2" : "VirtualGuy";
+        string prefabName = PhotonNetwork.IsMasterClient ? "Frog-2" : "Frog-3";
         PhotonNetwork.Instantiate(prefabName, spawnPoint.position, spawnPoint.rotation);
     }
 }

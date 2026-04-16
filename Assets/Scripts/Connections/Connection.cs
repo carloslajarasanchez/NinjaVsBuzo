@@ -40,7 +40,4 @@ public class Connection : MonoBehaviourPunCallbacks
         Debug.Log($"Conectado a la sala {PhotonNetwork.CurrentRoom.Name}");
         Debug.Log($"Hay {PhotonNetwork.CurrentRoom.PlayerCount} jugadores");
     }
-
-
-
 }
